@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+}
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+#pesquisar{
+    margin-left: 1px;
+    
+}
+
+#campoPesquisa{
+    width: 300px;
+
+}
+
+#btnEntrar{
+    width: 200px;
+    margin-left: 550px;
+}
+#btnCadastrar{
+    width: 200px;
+    margin-left: 10px;
+}
+
+.borda {
+    border-right: 2px solid black;
+    height: 1000px;
+    margin-left: 20px;
+}
+
+.tamanho {
+    height: 500px;
+
+}
+.tamanho li {
+    list-style: none;
+    font-size: 20pt;
+    margin-left: 50px;
+    margin-top: 20px;
+    color: black;
+}
+.tamanho a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+.tamanho a:hover {
+    color: gray;
+}
+
+#menu{
+    text-decoration: none;
+}
