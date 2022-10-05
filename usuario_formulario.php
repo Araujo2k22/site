@@ -17,11 +17,33 @@
           class="img-fluid" alt="Phone image">
       </div>
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        <form>
+      <?php
+        require_once 'includes/funcoes.php';
+        require_once 'core/conexao_mysql.php';
+        require_once 'core/sql.php';
+        require_once 'core/mysql.php';
+          
+          if(isset($_SESSION['login'])){
+            $id = (int) $_SESSION['login']['usuario']['id'];
+
+            $criterio = [
+              ['id', '=', $id]
+            ];
+
+            $retorno = buscar(
+              'usuario',
+              ['id', 'nome', 'email'],
+              $criterio
+            );
+
+            $entidade = $retorno[0];
+          }
+                     ?>
+        <form method="POST" action="core/usuario_repositorio.php">
           <!-- Nome completo input -->
           <div class="form-outline mb-4">
             <label class="form-label" for="nome" >Nome completo</label>
-            <input type="text" id="nome" class="form-control form-control-lg"/>
+            <input type="text" id="nome" name="nome" class="form-control form-control-lg"/>
           </div>
 
           <!-- Nome usuário input -->
@@ -58,5 +80,8 @@
   </div>
 </section>
 </html>
+<?php
+
+?>
  
  
