@@ -37,6 +37,9 @@
       <a href="cadastro.php"><button class="btn btn-primary my-2 my-sm-0" type="submit"
           id="btnCadastrar">Cadastrar</button></a>
     </div>
+    <div class="card-body text-right" id="icon1">
+      <a href="perfil_usuario.php"><i class="bi bi-person"></i></a>
+    </div>
   </nav>
   <div class="container-fluid">
     <div class="row tamanho">

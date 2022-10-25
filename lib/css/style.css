@@ -58,3 +58,13 @@ background: #eee;
 #menu{
     text-decoration: none;
 }
+#icon1{
+    font-size: 20pt;   
+}
+#icon1 a:hover{
+   color: gray;
+}
+#icon2{
+    font-size: 30pt;   
+    margin-left: 10px;;
+}
