@@ -38,7 +38,7 @@
             ];
 
             $criterio = [
-            ['id', '=', $id]
+            ['codUsuario', '=', $id]
             ];
 
             atualiza(
@@ -51,12 +51,12 @@
         case 'login':
             $criterio = [
                     ['email', '=', $email],
-                    ['AND', 'ativo'. '=', 1]
+                    ['AND', 'habilitado'. '=', 1]
             ];
 
             $retorno = buscar(
                 'usuario',
-                ['id', 'nome', 'nomeusuario', 'email', 'senha', 'adm'],
+                ['codUsuario', 'nome', 'nomeUsuario', 'email', 'senha'],
                 $criterio
             );
 
@@ -77,15 +77,15 @@
             session_destroy();
             break;
         case 'status':
-            $id = (int) $id;
+            $codUsuario = (int) $codUsuario;
             $valor = (int) $valor;
 
             $dados = [
-                'ativo' => $valor
+                'habilitado' => $valor
             ];
 
             $criterio = [
-                ['id', '=', $id]
+                ['codUsuario', '=', $codUsuario]
             ];
 
             atualiza(
@@ -97,17 +97,17 @@
             header('Location: ../usuarios.php');
             exit;
             break;
-
-        case 'adm':
-            $id = (int) $id;
+            
+        case 'habilitado':
+            $codUsuario = (int) $codUsuario;
             $valor = (int) $valor;
             
             $dados = [
-                'adm' => $valor    
+                'habilitado' => $valor    
             ];
 
             $criterio = [
-                ['id', '=', $id]
+                ['codUsuario', '=', $codUsuario]
             ];
 
             atualiza(
@@ -118,7 +118,7 @@
             
             header('location: ../usuarios.php');
             exit;
-            break;   
+            break;  
     }
     header('Location: ../index.php');
 ?>

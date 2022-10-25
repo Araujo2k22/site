@@ -17,10 +17,6 @@
 </head>
 
 <body>
-
-
-
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
     <img src="img/logo.png" width="150px" height="100px">
@@ -34,7 +30,7 @@
     <div class="collapse navbar-collapse" id="botoes">
       <a href="login_formulario.php"><button class="btn btn-primary my-2 my-sm-0" type="submit" id="btnEntrar">
         Entrar</button></a>
-      <a href="cadastro.php"><button class="btn btn-primary my-2 my-sm-0" type="submit"
+      <a href="usuario_formulario.php"><button class="btn btn-primary my-2 my-sm-0" type="submit"
           id="btnCadastrar">Cadastrar</button></a>
     </div>
     <div class="card-body text-right" id="icon1">
