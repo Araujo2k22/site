@@ -8,7 +8,28 @@
     <link rel="stylesheet" href="lib/css/bootstrap.css">
 </head>
 <body>
-   
+  <?php
+  require_once 'includes/funcoes.php';
+  require_once 'core/conexao_mysql.php';
+  require_once 'core/sql.php';
+  require_once 'core/mysql.php';
+
+  if(isset($_SESSION['login'])){
+      $id = (int) $_SESSION['login']['usuario']['id'];
+
+      $criterio = [
+          ['id', '=', $id]
+      ];
+
+      $retorno = buscar(
+          'usuario',
+          ['id', 'nome', 'email'],
+          $criterio
+      );
+
+      $entidade = $retorno[0];
+  }
+?>   
 <section class="vh-100">
   <div class="container py-5 h-100">
     <div class="row d-flex align-items-center justify-content-center h-100">
@@ -17,29 +38,33 @@
           class="img-fluid" alt="Phone image">
       </div>
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        <form>
+        <form method="post" action="core/usuario_repositorio.php">
+          <input type="hidden" name="acao"
+                                value="<?php echo empty($id) ? 'insert' : 'update' ?>">
+                        <input type="hidden" name="id"
+                                value="<?php echo $entidade['id'] ?? '' ?>">
           <!-- Nome completo input -->
           <div class="form-outline mb-4">
             <label class="form-label" for="nome" >Nome completo</label>
-            <input type="text" id="nome" class="form-control form-control-lg"/>
+            <input type="text" name="nome" id="nome" class="form-control form-control-lg"/>
           </div>
 
           <!-- Nome usuário input -->
           <div class="form-outline mb-4">
             <label class="form-label" for="nomeUsuario" >Nome de usuário</label>
-            <input type="text" id="nomeUsuario" class="form-control form-control-lg"/>
+            <input type="text" name="nomeUsuario" id="nomeUsuario" class="form-control form-control-lg"/>
             
           </div>
           <!-- Email input -->
           <div class="form-outline mb-4">
             <label class="form-label" for="email" >E-mail</label>
-            <input type="text" id="email" class="form-control form-control-lg"/>
+            <input type="text" name="email" id="email" class="form-control form-control-lg"/>
           </div>
  
           <!-- Senha input -->
           <div class="form-outline mb-4">
             <label class="form-label" for="senha">Senha</label>
-            <input type="password" id="senha" class="form-control form-control-lg" />
+            <input type="password" name="senha" id="senha" class="form-control form-control-lg" />
           </div>
 
           <!-- Confirmar senha input -->
