@@ -14,43 +14,43 @@
             class="img-fluid" alt="Phone image">
         </div>
         <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-            <form>
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-                <input type="email" id="form1Example13" class="form-control form-control-lg" />
-                <label class="form-label" for="form1Example13">Email</label>
-            </div>
-
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-                <input type="password" id="form1Example23" class="form-control form-control-lg" />
-                <label class="form-label" for="form1Example23">Senha</label>
-            </div>
-
-            <div class="d-flex justify-content-around align-items-center mb-4">
-                <!-- Checkbox -->
-                <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                <label class="form-check-label" for="form1Example3"> Lembre de mim </label>
+            <form method="post" action="core/usuario_repositorio.php">
+                <input type="hidden" name="acao" value="login">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="email" name="email" class="form-control form-control-lg" require="required" />
+                    <label class="form-label" for="email">Email</label>
                 </div>
-                <a href="#!">Esqueceu a senha?</a>
-            </div>
 
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" id="senha" name="senha" class="form-control form-control-lg" require="required" />
+                    <label class="form-label" for="senha">Senha</label>
+                </div>
 
-            <div class="divider d-flex align-items-center my-4">
-                <p class="text-center fw-bold mx-3 mb-0 text-muted">OU</p>
-            </div>
+                <div class="d-flex justify-content-around align-items-center mb-4">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                    <label class="form-check-label" for="form1Example3"> Lembre de mim </label>
+                    </div>
+                    <a href="#!">Esqueceu a senha?</a>
+                </div>
 
-            <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
-            role="button">
-            <i class="fab fa-facebook-f me-2"></i>Continuar com Facebook
-          </a>
-          <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!"
-            role="button">
-            <i class="fab fa-google me-2"></i>Continuar com Google</a>
-            
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+
+                <div class="divider d-flex align-items-center my-4">
+                    <p class="text-center fw-bold mx-3 mb-0 text-muted">OU</p>
+                </div>
+
+                <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
+                role="button">
+                <i class="fab fa-facebook-f me-2"></i>Continuar com Facebook
+                </a>
+                <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!"
+                role="button">
+                <i class="fab fa-google me-2"></i>Continuar com Google</a>
             </form>
         </div>
         </div>
