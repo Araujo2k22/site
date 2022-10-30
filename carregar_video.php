@@ -17,9 +17,10 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-    <img src="img/logo.png" width="150px" height="100px">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a href="index.php"><img src="img/logo.png" width="150px" height="100px"></a>
     <input class="form-control mr-sm-2" type="pesquisar" placeholder="Pesquisar" aria-label="Search" id="campoPesquisa">
     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="pesquisar">Pesquisar</button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -32,6 +33,25 @@
       + Carregar</button></a>
       <a href="cadastro_video.php"><i class="bi bi-info-square-fill" id="icon2"></i></a>
     </div>
+ </nav>
+
+ <main role="main" class="container" id="main-video">
+    <div class="jumbotron" id="upload-video">
+        <h1 id="text-title">Cadastrar vídeo</h1>
+        <p id="text-normal">Publicar um vídeo na sua conta</p>
+      
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+
 
   <?php if(isset($_SESSION['login'])): ?>
     <div class="card-body text-right" id="icon1">
@@ -39,7 +59,7 @@
     </div>
     <?php endif ?>
     
-  </nav>
+ 
   
   
 

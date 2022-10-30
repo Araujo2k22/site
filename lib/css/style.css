@@ -68,3 +68,24 @@ background: #eee;
     font-size: 30pt;   
     margin-left: 10px;;
 }
+
+#text-title{
+    font-size: 20pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#body-video{
+    position: absolute;
+
+}
+
+#upload-video{
+    background-color: Seashell	;
+    margin-top: 50px;
+    height: 1000px;
+    border: 1px gainsboro;
+}
+#text-normal{
+    color: gray;
+    font-size: 2opt;
+}
