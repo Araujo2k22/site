@@ -28,7 +28,7 @@
         <a href="index.php"><i class="bi bi-house-fill">Inicio</i></a>
       </li>
       <li>
-        <a href=""><i class="bi bi-person-plus">Seguindo</i></a>
+        <a href="carregar_video.php"><i class="bi bi-person-plus">Seguindo</i></a>
       </li>
       <li>
         <a href="materias.php"><i class="bi bi-book">Matérias</i></a>

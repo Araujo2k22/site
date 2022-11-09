@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
     <img src="img/logo.png" width="150px" height="100px">
