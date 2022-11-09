@@ -39,25 +39,83 @@
     <div class="jumbotron" id="upload-video">
         <h1 id="text-title">Cadastrar vídeo</h1>
         <p id="text-normal">Publicar um vídeo na sua conta</p>
-      
+        <!DOCTYPE html>
+
+  <?php
+  require_once 'includes/funcoes.php';
+  require_once 'core/conexao_mysql.php';
+  require_once 'core/sql.php';
+  require_once 'core/mysql.php';
+
+  if(isset($_SESSION['login'])){
+      $id = (int) $_SESSION['login']['usuario']['id'];
+
+      $criterio = [
+          ['id', '=', $id]
+      ];
+
+      $retorno = buscar(
+          'video',
+          ['id', 'titulo', ''],
+          $criterio
+      );
+
+      $entidade = $retorno[0];
+  }
+?>   
+<section class="vh-100">
+  <div class="container py-5 h-100">
+<!--
+  <video width="320" height="240" controls>
+    <source src="upload/video.mp4" type="video/mp4">  
+      Your browser does not support the video tag.
+  </video>
+-->
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        <form method="post" action="core/usuario_repositorio.php" enctype="multipart/form-data>
+          <input type="hidden" name="acao"
+                                value="<?php echo empty($id) ? 'insert' : 'update' ?>">
+                        <input type="hidden" name="id"
+                                value="<?php echo $entidade['id'] ?? '' ?>">
+          <!-- Nome completo input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="titulo" >Título</label>
+            <input type="text" name="titulo" id="titulo" class="form-control form-control-lg"/>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="email" >E-mail</label>
+            <input type="text" name="email" id="email" class="form-control form-control-lg"/>
+          </div>
+ 
+          <!-- Senha input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" class="form-control form-control-lg" />
+          </div>
+
+          <!-- Confirmar senha input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="senha">Confirmar senha</label>
+            <input type="password" id="senha" class="form-control form-control-lg" />
+          </div>
+ 
+          <div class="d-flex justify-content-around align-items-center mb-4">
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+        <input type="file"/>
     </div>
 </main>
 
 
-
-
-
-
-
-
-
-
-
-  <?php if(isset($_SESSION['login'])): ?>
-    <div class="card-body text-right" id="icon1">
-      <a href="perfil_usuario.php"><i class="bi bi-person"></i></a>
-    </div>
-    <?php endif ?>
     
  
   

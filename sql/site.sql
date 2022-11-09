@@ -83,3 +83,5 @@ ALTER TABLE denuncia ADD CONSTRAINT FK_denuncia_1
     REFERENCES usuario (codUsuario)
     ON DELETE SET NULL;
     
+insert into materia (nome, assunto) values ('Matemática','');
+insert into materia  (nome, assunto) values('Português','');

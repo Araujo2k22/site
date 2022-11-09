@@ -20,6 +20,7 @@
             'nome' => $nome,
             'nomeUsuario' => $nomeUsuario,
             'email' => $email,
+            'habilitado' => 1,
             'senha' => crypt($senha,$salt)
             ];
 
