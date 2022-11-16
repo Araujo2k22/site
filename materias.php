@@ -41,20 +41,20 @@
     <!-- Materias -->
         <div class="col-9">
             <ul id="materias1">
-                <li><a href="materias/matematica.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-mat formatoMaterias" ><img src="../img/matematica.png" alt=""></i></button></a>
+                <li><a href="materias/matematica.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-mat formatoMaterias" ><img src="/img/icons materias/matematica.png" alt=""></i></button></a>
                     <p>Matemática</p>
                 </li>
-                <li><a href="materias/portugues.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-port formatoMaterias"> <img src="../img/portugues.png" alt=""></i></button></a></li>
-                <li><a href="materias/historia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-his formatoMaterias" ><img src="../img/historia.png" alt=""></button></a></li>
-                <li><a href="materias/biologia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-bio formatoMaterias" ><img src="../img/biologia.png" alt=""></button></a></li>
-                <li><a href="materias/espanhol.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-esp formatoMaterias" ><img src="../img/espanhol.png" alt=""></button></a></li>
+                <li><a href="materias/portugues.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-port formatoMaterias"> <img src="./img/portugues.png" alt=""></i></button></a></li>
+                <li><a href="materias/historia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-his formatoMaterias" ><img src="/img/icons materias/historia.png" alt=""></button></a></li>
+                <li><a href="materias/biologia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-bio formatoMaterias" ><img src="./img/icons materias/biologia.png" alt=""></button></a></li>
+                <li><a href="materias/espanhol.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-esp formatoMaterias" ><img src="/img/icons materias/espanhol.png" alt=""></button></a></li>
             </ul>
             <ul id="materias1">
-                <li><a href="materias/quimica.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-qui formatoMaterias" ><img src="../img/quimica.png" alt=""></i></button></a></li>
-                <li><a href="materias/sociologia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-socio formatoMaterias" ><img src="../img/sociologia.png" alt=""></button></a></li>
-                <li><a href="materias/filosofia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-filo formatoMaterias" ><img src="../img/filosofia.png" alt=""></button></a></li>
-                <li><a href="materias/geografia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-geo formatoMaterias" ><img src="../img/geografia.png" alt=""></button></a></li>
-                <li><a href="materias/ingles.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-ing formatoMaterias" ><img src="../img/ingles.png" alt=""></button></a></li>
+                <li><a href="materias/quimica.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-qui formatoMaterias" ><img src="/img/icons materias/quimica.png" alt=""></i></button></a></li>
+                <li><a href="materias/sociologia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-socio formatoMaterias" ><img src="/img/icons materias/sociologia.png" alt=""></button></a></li>
+                <li><a href="materias/filosofia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-filo formatoMaterias" ><img src="/img/icons materias/filosofia.png" alt=""></button></a></li>
+                <li><a href="materias/geografia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-geo formatoMaterias" ><img src="/img/icons materias/geografia.png" alt=""></button></a></li>
+                <li><a href="materias/ingles.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-ing formatoMaterias" ><img src="/img/icons materias/ingles.png" alt=""></button></a></li>
             </ul>
         </div>
     </div>
