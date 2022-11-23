@@ -17,10 +17,17 @@
 </head>
 
 <body>
-    <!-- TOPO-->
+
+    <!-- TOPO -->
     <?php
-        include 'includes/topo.php';
+      include 'includes/topo.php';
     ?>
+
+    <!-- BUSCA -->
+    <?php
+      include 'includes/busca.php'
+    ?>
+
   <div class="container-fluid">
     <div class="row tamanho">
       <div class="col-2 borda" id="menu">
