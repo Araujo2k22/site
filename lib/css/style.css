@@ -87,7 +87,7 @@ background: #eee;
 }
 #text-normal{
     color: gray;
-    font-size: 2opt;
+    font-size: 20pt;
 }
 
 .btn-materias {
@@ -114,7 +114,16 @@ background: #eee;
 
 }
 
+.p-materias{
+    list-style: none;
+    font-size: 13pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    color: black;
+}
+
 img{
+<<<<<<< HEAD
     width: 50px;
     height: 50px;
 }
@@ -122,4 +131,16 @@ img{
 #videos{
     position: relative;
     
+=======
+    width: 75px;
+    height: 75px;
+}
+#img_topo {
+    width: 150px;
+    height: 110px;
+}
+
+ul li div.teste {
+    text-align: center;
+>>>>>>> a2f5e77fd0509ff2c2cad2a6da36f05e9b6e8c83
 }

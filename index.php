@@ -17,7 +17,21 @@
 </head>
 
 <body>
+<<<<<<< HEAD
   <!-- TOPO-->
+=======
+
+    <!-- TOPO -->
+    <?php
+      include 'includes/topo.php';
+    ?>
+
+    <!-- BUSCA -->
+    <?php
+      include 'includes/busca.php'
+    ?>
+
+>>>>>>> a2f5e77fd0509ff2c2cad2a6da36f05e9b6e8c83
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
