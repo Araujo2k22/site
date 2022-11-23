@@ -12,10 +12,13 @@
     </button>
 
     <div class="collapse navbar-collapse" id="botoes">
-      <a href="login_formulario.php"><button class="btn btn-primary my-2 my-sm-0" type="submit" id="btnEntrar">
-        Entrar</button></a>
-      <a href="usuario_formulario.php"><button class="btn btn-primary my-2 my-sm-0" type="submit"
-          id="btnCadastrar">Cadastrar</button></a>
+      
+        
+        <a href="login_formulario.php" class="btn btn-primary my-2 my-sm-0" id="btnEntrar">
+        Entrar</a>
+      <a href="usuario_formulario.php">
+        <button class="btn btn-primary my-2 my-sm-0" type="submit" id="btnCadastrar">Cadastrar</button>
+      </a>
     </div>
 
   <?php if(isset($_SESSION['login'])): ?>

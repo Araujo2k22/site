@@ -10,6 +10,7 @@
         }
 
         $instrucao = insert($entidade, $coringa);
+        echo $instrucao;
         $conexao = conecta();
 
         $stmt = mysqli_prepare($conexao, $instrucao);
@@ -57,7 +58,7 @@ $$nome_campo = $dado;
 }
 
 $instrucao = update($entidade, $coringa_dados, $coringa_criterio);
-echo $instrucao;
+
 $conexao = conecta();
 
 $stmt = mysqli_prepare($conexao, $instrucao);
@@ -157,7 +158,7 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
     }
 
     $instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
-    echo $instrucao;
+    
     $conexao = conecta();
     
     $stmt = mysqli_prepare($conexao, $instrucao);

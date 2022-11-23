@@ -65,6 +65,20 @@
 ?>   
 <section class="vh-100">
   <div class="container py-5 h-100">
+
+
+    <?php
+        require_once 'includes/funcoes.php';
+        require_once 'core/conexao_mysql.php';
+        require_once 'core/sql.php';
+        require_once 'core/mysql.php';
+        $materias = buscar(
+          'materia',
+          ['*'],
+          []
+        );
+
+    ?>    
 <!--
   <video width="320" height="240" controls>
     <source src="upload/video.mp4" type="video/mp4">  
@@ -73,35 +87,41 @@
 -->
     <div class="row d-flex align-items-center justify-content-center h-100">
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        <form method="post" action="core/usuario_repositorio.php" enctype="multipart/form-data>
-          <input type="hidden" name="acao"
+        <form method="post" action="core/video_repositorio.php" enctype="multipart/form-data">
+          <input type="hidden" name="acao" id="acao"
                                 value="<?php echo empty($id) ? 'insert' : 'update' ?>">
                         <input type="hidden" name="id"
                                 value="<?php echo $entidade['id'] ?? '' ?>">
-          <!-- Nome completo input -->
+          <!-- Nome do vídeo -->
           <div class="form-outline mb-4">
             <label class="form-label" for="titulo" >Título</label>
             <input type="text" name="titulo" id="titulo" class="form-control form-control-lg"/>
           </div>
 
-          <!-- Email input -->
-          <div class="form-outline mb-4">
-            <label class="form-label" for="email" >E-mail</label>
-            <input type="text" name="email" id="email" class="form-control form-control-lg"/>
+        
+ 
+         <div class="form-group">
+            <label for="exampleFormControlSelect1">Matéria</label>
+            <select class="form-control" name="codMateria" id="codMateria">            
+            <?php
+              foreach($materias as $materia):
+            ?>
+              <option value=<?php echo $materia['codMateria']?>> <?php echo $materia['nome']?></option>
+            <?php endforeach; ?>
+            </select>
           </div>
  
-          <!-- Senha input -->
-          <div class="form-outline mb-4">
-            <label class="form-label" for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" class="form-control form-control-lg" />
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="private" id="private" value="privado">Privado</input>
+          <br>
+          <input class="form-check-input" type="radio" name="private" id="private" value="publico">Público</input>
+          
+          </div>
+          <div class="form-group">
+            <input id="video" name="video" type="file"/>
           </div>
 
-          <!-- Confirmar senha input -->
-          <div class="form-outline mb-4">
-            <label class="form-label" for="senha">Confirmar senha</label>
-            <input type="password" id="senha" class="form-control form-control-lg" />
-          </div>
- 
+
           <div class="d-flex justify-content-around align-items-center mb-4">
           <!-- Submit button -->
           <button type="submit" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
@@ -109,21 +129,6 @@
         </form>
       </div>
     </div>
-  </div>
-
-        <input type="file"/>
-    </div>
 </main>
-
-
-    
- 
-  
-  
-
-
-
-  
-    
 </body>
 </html>
