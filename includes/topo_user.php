@@ -12,13 +12,9 @@
     </button>
 
     <div class="collapse navbar-collapse" id="botoes">
-      
-        
-        <a href="login_formulario.php" class="btn btn-primary my-2 my-sm-0" id="btnEntrar">
-        Entrar</a>
-      <a href="usuario_formulario.php">
-        <button class="btn btn-primary my-2 my-sm-0" type="submit" id="btnCadastrar">Cadastrar</button>
-      </a>
+      <a href="carregar_video.php"><button class="btn btn-primary my-2 my-sm-0" type="submit" id="btnEntrar">
+      + Carregar</button></a>
+      <a href="cadastro_video.php"><i class="bi bi-info-square-fill" id="icon2"></i></a>
     </div>
 
   <?php if(isset($_SESSION['login'])): ?>
