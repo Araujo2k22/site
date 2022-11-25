@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" 
-              href="lib2/css/bootstrap.css">
+              href="lib/css/bootstrap.css">
     <link rel="stylesheet" 
               href="style.css">
 </head>

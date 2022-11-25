@@ -17,79 +17,62 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-  <!-- TOPO-->
-=======
-
-    <!-- TOPO -->
+    <!-- TOPO-->
     <?php
-      include 'includes/topo.php';
+        include 'includes/topo.php';
     ?>
-
-    <!-- BUSCA -->
-    <?php
-      include 'includes/busca.php'
-    ?>
-
->>>>>>> a2f5e77fd0509ff2c2cad2a6da36f05e9b6e8c83
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <?php
-          include 'includes/topo.php';
-        ?>
-      </div>  
-    </div>  
-    <div class="row mb-2 tamanho">
-      <div class="col-md-4">
-      
-            <li>
-              <a href="index.php"><i class="bi bi-house-fill">Inicio</i></a>
-            </li>
-            <li>
-              <a href="carregar_video.php"><i class="bi bi-person-plus">Seguindo</i></a>
-            </li>
-            <li>
-              <a href="materias.php"><i class="bi bi-book">Matérias</i></a>
-            </li>
-            <li>
-              <p style="font-size: 15pt;">Faça login para poder curtir, comentar e compartilhar.</p>
-            </li>
-      
+    <div class="row tamanho">
+      <div class="col-2 borda" id="menu">
+      <li>
+        <a href="index.php"><i class="bi bi-house-fill">Inicio</i></a>
+      </li>
+      <li>
+        <a href="carregar_video.php"><i class="bi bi-person-plus">Seguindo</i></a>
+      </li>
+      <li>
+        <a href="materias.php"><i class="bi bi-book">Matérias</i></a>
+      </li>
+      <li>
+        <p style="font-size: 15pt;">Faça login para poder curtir, comentar e compartilhar.</p>
+      </li>
       </div>
+
+
+      <!---Video-->
       <div class="col-md-8">
         
-            <?php
-              require_once 'includes/funcoes.php';
-              require_once 'core/conexao_mysql.php';
-              require_once 'core/sql.php';
-              require_once 'core/mysql.php';
-              foreach($_GET as $indice => $dado){
-                    $$indice = limparDados($dado);
-                }           
+        <?php
+          require_once 'includes/funcoes.php';
+          require_once 'core/conexao_mysql.php';
+          require_once 'core/sql.php';
+          require_once 'core/mysql.php';
+          foreach($_GET as $indice => $dado){
+                $$indice = limparDados($dado);
+            }           
 
-              $criterio = [];
-              if(!empty($busca)){
-                    $criterio[] = ['nome', 'like', "%{$busca}%"];
-              }
-              $videos = buscar(
-                  'video',
-                    ['*']
-                );
-            ?>   
-            <?php
-              $video_dir = "upload/videos/";
-              foreach($videos as $video):
-            ?>
-            <video width="320" height="240" controls>
-              <source src="<?php echo $video_dir.$video['filePath'] ?>" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <?php endforeach; ?>  
-        
+          $criterio = [];
+          if(!empty($busca)){
+                $criterio[] = ['nome', 'like', "%{$busca}%"];
+          }
+          $videos = buscar(
+              'video',
+                ['*']
+            );
+        ?>   
+        <?php
+          $video_dir = "upload/videos/";
+          foreach($videos as $video):
+        ?>
+      <div class="container-fluid" id="videos">
+        <video width="250" height="600" controls>
+          <source src="<?php echo $video_dir.$video['filePath'] ?>" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
-    </div>
-  
+        <?php endforeach; ?>  
+    
   </div>
- </body>
+</div>
+</body>
 </html>
