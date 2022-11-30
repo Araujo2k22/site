@@ -44,31 +44,31 @@
             <ul id="materias1">
                 <li>
                     <div class="teste">
-                        <a href="materias/matematica.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-mat formatoMaterias" ><img src="./img/icons_materias/matematica.png" alt=""></i></button></a>
+                        <a href="index.php?codMateria=8"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-mat formatoMaterias" ><img src="./img/icons_materias/matematica.png" alt=""></i></button></a>
                         <p class="p-materias">Matemática</p>
                     </div>
                 </li>
                 <li>
                     <div class="teste">
-                        <a href="materias/portugues.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-port formatoMaterias"> <img src="./img/icons_materias/portugues.png" alt=""></i></button></a>
+                        <a href="index.php?codMateria=9"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-port formatoMaterias"> <img src="./img/icons_materias/portugues.png" alt=""></i></button></a>
                         <p class="p-materias">Língua Portuguesa</p>
                     </div>
                 </li>
                 <li>
                     <div class="teste">
-                        <a href="materias/historia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-his formatoMaterias" ><img src="./img/icons_materias/historia.png" alt=""></button></a>
+                        <a href="index.php?codMateria=6"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-his formatoMaterias" ><img src="./img/icons_materias/historia.png" alt=""></button></a>
                         <p class="p-materias">História</p>
                     </div>
                 </li>
                 <li>
                     <div class="teste">
-                        <a href="materias/biologia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-bio formatoMaterias" ><img src="./img/icons_materias/biologia.png" alt=""></button></a>
+                        <a href="index.php?codMateria=1"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-bio formatoMaterias" ><img src="./img/icons_materias/biologia.png" alt=""></button></a>
                         <p class="p-materias">Biologia</p>
                     </div>
                 </li>
                 <li>
                     <div class="teste">
-                        <a href="materias/espanhol.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-esp formatoMaterias" ><img src="./img/icons_materias/espanhol.png" alt=""></button></a>
+                        <a href="index.php?codMateria=2"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-esp formatoMaterias" ><img src="./img/icons_materias/espanhol.png" alt=""></button></a>
                         <p class="p-materias">Espanhol</p>
                     </div>
                 </li>
@@ -76,31 +76,31 @@
             <ul id="materias1">
                 <li>
                     <div class="teste">
-                        <a href="materias/qumica.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-qui formatoMaterias" ><img src="./img/icons_materias/quimica.png" alt=""></i></button></a>
+                        <a href="index.php?codMateria=10"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-qui formatoMaterias" ><img src="./img/icons_materias/quimica.png" alt=""></i></button></a>
                         <p class="p-materias">Química</p>
                     </div>
                 </li>
                 <li>
                     <div class="teste">
-                        <a href="materias/sociologia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-socio formatoMaterias" ><img src="./img/icons_materias/sociologia.png" alt=""></button></a>
+                        <a href="index.php?codMateria=11"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-socio formatoMaterias" ><img src="./img/icons_materias/sociologia.png" alt=""></button></a>
                         <p class="p-materias">Sociologia</p>
                     </div>
                 </li>
                 <li>
                     <div class="teste">
-                        <a href="materias/filosofia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-filo formatoMaterias" ><img src="./img/icons_materias/filosofia.png" alt=""></button></a>
+                        <a href="index.php?codMateria=3"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-filo formatoMaterias" ><img src="./img/icons_materias/filosofia.png" alt=""></button></a>
                         <p class="p-materias">Filosofia</p>
                     </div>
                 </li>
                 <li>
                     <div class="teste">
-                        <a href="materias/geografia.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-geo formatoMaterias" ><img src="./img/icons_materias/geografia.png" alt=""></button></a>
+                        <a href="index.php?codMateria=5"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-geo formatoMaterias" ><img src="./img/icons_materias/geografia.png" alt=""></button></a>
                         <p class="p-materias">Geografia</p>
                     </div>
                 </li>
                 <li>
                     <div class="teste">
-                        <a href="materias/ingles.php"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-ing formatoMaterias" ><img src="./img/icons_materias/ingles.png" alt=""></button></a>
+                        <a href="index.php?codMateria=7"><button type="submit" class="btn btn-primary btn-lg btn-block btn-materias btn-ing formatoMaterias" ><img src="./img/icons_materias/ingles.png" alt=""></button></a>
                         <p class="p-materias">Inglês</p>
                     </div>
                 </li>

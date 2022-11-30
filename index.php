@@ -22,6 +22,7 @@
     <?php
         include 'includes/topo.php';
     ?>
+    
   <div class="container-fluid">
     <div class="row tamanho">
       <div class="col-2 borda" id="menu">
@@ -53,14 +54,22 @@
             }           
 
           $criterio = [];
+          
           if(!empty($busca)){
                 $criterio[] = ['nome', 'like', "%{$busca}%"];
           }
+
+          if(isset($codMateria)){
+            $criterio[] = ['fk_materia_codMateria', '=', $codMateria];
+          }
+          
           $videos = buscar(
               'video',
                 ['*',
-                '(select nome from usuario where usuario.codUsuario = video.fk_Usuario_codUsuario) as usuario'
-                ]
+                '(select nome from usuario where usuario.codUsuario = video.fk_Usuario_codUsuario) as usuario',
+                '(select nome from materia where materia.codMateria = video.fk_materia_codMateria) as materia'
+              ],
+              $criterio
             );
         ?>   
       <?php
@@ -71,6 +80,7 @@
         <div class="listagem_video">
           <div class="nome_video">
             <p><h3 id="text-title"> <?php  echo $video['usuario'] ?>   </h3>   </p>
+            <p><h3 id="text-title"> <?php  echo $video['materia'] ?>   </h3>   </p>
             <p> <?php  echo $video['titulo'] ?> </p>
           </div>
           <div class="video">
@@ -86,5 +96,5 @@
     
   </div>
 </div>
-</body>
+</body>                 
 </html>
