@@ -39,10 +39,15 @@
       </div>
 
        <div class="container-fluid">
-		   
-
-	   </div>
+		  <main role="main" class="container" id="main-usuario">
+    <div class="jumbotron" id="upload-video">
+        <h1 id="text-title">Cadastrar vídeo</h1>
+        <p id="text-normal">Publicar um vídeo na sua conta</p>
+    </main>
 
 </div>
+</div>
 </body>
+
+
 </html>
