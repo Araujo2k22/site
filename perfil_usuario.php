@@ -38,7 +38,7 @@
       </li>
       </div>
 
-       <div class="container-fluid">
+       <div class="container-fluid" >
 		  <main role="main" class="container" id="main-usuario">
     <div class="jumbotron" id="upload-video">
         <h1 id="text-title">Cadastrar vídeo</h1>

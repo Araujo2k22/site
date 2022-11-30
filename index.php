@@ -84,7 +84,8 @@
             <p> <?php  echo $video['titulo'] ?> </p>
           </div>
           <div class="video">
-            <video width="250" height="400" controls>
+            <video width="250" height="400" controls id="video-estilo">
+  
               <source src="<?php echo $video_dir.$video['filePath'] ?>" type="video/mp4">
               Your browser does not support the video tag.
             </video>
