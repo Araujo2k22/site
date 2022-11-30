@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="lib/css/style.css">
   <!---Icones-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -57,18 +58,29 @@
           }
           $videos = buscar(
               'video',
-                ['*']
+                ['*',
+                '(select nome from usuario where usuario.codUsuario = video.fk_Usuario_codUsuario) as usuario'
+                ]
             );
         ?>   
-        <?php
-          $video_dir = "upload/videos/";
-          foreach($videos as $video):
-        ?>
+      <?php
+        $video_dir = "upload/videos/";
+        foreach($videos as $video):
+      ?>
       <div class="container-fluid" id="videos">
-        <video width="250" height="600" controls>
-          <source src="<?php echo $video_dir.$video['filePath'] ?>" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="listagem_video">
+          <div class="nome_video">
+            <p><h3 id="text-title"> <?php  echo $video['usuario'] ?>   </h3>   </p>
+            <p> <?php  echo $video['titulo'] ?> </p>
+          </div>
+          <div class="video">
+            <video width="250" height="400" controls>
+              <source src="<?php echo $video_dir.$video['filePath'] ?>" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <hr>
+        </div>  
       </div>
         <?php endforeach; ?>  
     
