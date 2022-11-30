@@ -56,7 +56,7 @@
           $criterio = [];
           
           if(!empty($busca)){
-                $criterio[] = ['nome', 'like', "%{$busca}%"];
+                $criterio[] = ['titulo', 'like', "%{$busca}%"];
           }
 
           if(isset($codMateria)){
