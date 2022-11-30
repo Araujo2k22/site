@@ -149,7 +149,6 @@ ul li div.teste {
     height: 560px;
 }
 
-#main-usuario{  
-  margin-top: 1px;
-  margin-left: 20px;
+.nome_video {
+    background-color: bisque;
 }

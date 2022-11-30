@@ -17,11 +17,9 @@
 </head>
 
 <body>
-  <!-- TOPO-->
-  <?php
-        include './includes/topo.php';
-    ?>
-
+  <?php 
+    include '../includes/materias.php';
+  ?>
   <div class="container-fluid">
     <div class="row tamanho">
       <div class="col-2 borda" id="menu">
@@ -39,33 +37,6 @@
       </li>
       </div>
 
-      <?php
-          require_once './includes/funcoes.php';
-          require_once './core/conexao_mysql.php';
-          require_once './core/sql.php';
-          require_once './core/mysql.php';
-          foreach($_GET as $indice => $dado){
-                $$indice = limparDados($dado);
-            }           
-
-          $criterio = [];
-          if(!empty($busca)){
-                $criterio[] = ['nome', 'like', "%{$busca}%"];
-          }
-          $videos = buscar(
-              'video',
-                ['*']
-            );
-        ?>   
-        <?php
-          $video_dir = "upload/videos/";
-          foreach($videos as $video):
-        ?>
-        <video width="320" height="240" controls>
-          <source src="<?php echo $video_dir.$video['filePath'] ?>" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <?php endforeach; ?>  
-            
-  </body>
-</html>
+      <p>Olá</p>
+</body>
+</html> 
