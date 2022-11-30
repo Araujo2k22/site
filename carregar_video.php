@@ -18,22 +18,9 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-    <a href="index.php"><img src="img/logo.png" width="150px" height="100px"></a>
-    <input class="form-control mr-sm-2" type="pesquisar" placeholder="Pesquisar" aria-label="Search" id="campoPesquisa">
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="pesquisar">Pesquisar</button>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="botoes">
-      <a href="carregar_video.php"><button class="btn btn-primary my-2 my-sm-0" type="submit" id="btnEntrar">
-      + Carregar</button></a>
-      <a href="cadastro_video.php"><i class="bi bi-info-square-fill" id="icon2"></i></a>
-    </div>
- </nav>
+<?php
+        include 'includes/topo_user.php';
+    ?>
 
  <main role="main" class="container" id="main-video">
     <div class="jumbotron" id="upload-video">
@@ -46,9 +33,9 @@
   require_once 'core/conexao_mysql.php';
   require_once 'core/sql.php';
   require_once 'core/mysql.php';
-
+/*
   if(isset($_SESSION['login'])){
-      $id = (int) $_SESSION['login']['usuario']['id'];
+      $id = (int) $_SESSION['login']['usuario']['codUsuario'];
 
       $criterio = [
           ['id', '=', $id]
@@ -61,8 +48,10 @@
       );
 
       $entidade = $retorno[0];
-  }
-?>   
+    }
+    */
+?>
+
 <section class="vh-100">
   <div class="container py-5 h-100">
 

@@ -123,15 +123,12 @@ background: #eee;
 }
 
 img{
-<<<<<<< HEAD
     width: 50px;
     height: 50px;
 }
 
 #videos{
     position: relative;
-    
-=======
     width: 75px;
     height: 75px;
 }
@@ -142,7 +139,7 @@ img{
 
 ul li div.teste {
     text-align: center;
->>>>>>> a2f5e77fd0509ff2c2cad2a6da36f05e9b6e8c83
+
 }
 
 #videos{
@@ -150,4 +147,8 @@ ul li div.teste {
     margin-top: 10px;
     width: 500px;
     height: 560px;
+}
+
+.nome_video {
+    background-color: bisque;
 }
