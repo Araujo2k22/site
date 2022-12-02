@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+ 
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +23,30 @@
     <?php
         include 'includes/topo_user.php';
     ?>
+    <?php
+          require_once 'includes/funcoes.php';
+          require_once 'core/conexao_mysql.php';
+          require_once 'core/sql.php';
+          require_once 'core/mysql.php';
+          foreach($_GET as $indice => $dado){
+                $$indice = limparDados($dado);
+            }           
+
+          $criterio = [];
+
+          $criterio[] = [
+            'fk_Usuario_codUsuario', '=', $_SESSION['login']['usuario']['codUsuario']
+          ];
+          
+          $videos = buscar(
+              'video',
+                ['*',
+                '(select nome from usuario where usuario.codUsuario = video.fk_Usuario_codUsuario) as usuario',
+                '(select nome from materia where materia.codMateria = video.fk_materia_codMateria) as materia'
+              ],
+              $criterio
+            );
+        ?> 
   <div class="container-fluid">
     <div class="row tamanho">
       <div class="col-2 borda" id="menu">
@@ -37,15 +63,36 @@
         <p style="font-size: 15pt;">Faça login para poder curtir, comentar e compartilhar.</p>
       </li>
       </div>
-
-       <div class="container-fluid" >
-		  <main role="main" class="container" id="main-usuario">
-    <div class="jumbotron" id="upload-video">
-        <h1 id="text-title">Cadastrar vídeo</h1>
-        <p id="text-normal">Publicar um vídeo na sua conta</p>
-    </main>
-
+      <div class="col-8" id="menu">
+      <div class="container-fluid">
+        <div class="container-fluid">
+        <div class="card-body text-left" id="perfil">
+      <i style="font-size: 50pt;" class="bi bi-person"></i>
+      </div></a>
+        <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nome'] ?>  </h3>   </p>
+        <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nomeUsuario'] ?>  </h3>   </p> 
+		</div> 
+    <?php
+        $video_dir = "upload/videos/";
+        foreach($videos as $video):
+      ?>
+      <div class="container-fluid" id="videos">
+        <div class="listagem_video">
+          <div class="video">
+            <video width="250" height="400" controls id="video-estilo">
+  
+              <source src="<?php echo $video_dir.$video['filePath'] ?>" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <hr>
+        </div>  
+      </div>
+        <?php endforeach; ?>
+  </div>
 </div>
+
+       
 </div>
 </body>
 
