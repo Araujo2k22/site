@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
- 
+ <?php
+         if(isset($_SESSION['login'])): ?>
+         <?php include 'includes/topo.php' ?>
+          <div class="card-body text-right" id="icon1">
+            <a href="includes/topo_user.php"><i class="bi bi-person"></i></a>
+          </div>
+      
+    <?php else: include 'includes/topo_user.php'  ?>
+    <?php endif ?>
 
 <head>
   <meta charset="UTF-8">
