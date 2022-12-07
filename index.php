@@ -76,7 +76,7 @@
         $video_dir = "upload/videos/";
         foreach($videos as $video):
       ?>
-      <div class="container-fluid" id="videos">
+      <div class="container-fluid" id="videos1">
         <div class="listagem_video">
           <div class="nome_video">
             <p><h3 id="text-title"> <?php  echo $video['usuario'] ?>   </h3>   </p>

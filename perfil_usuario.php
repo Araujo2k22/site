@@ -2,14 +2,18 @@
 <html lang="en">
 
  <?php
-         if(isset($_SESSION['login'])): ?>
-         <?php include 'includes/topo.php' ?>
-          <div class="card-body text-right" id="icon1">
-            <a href="includes/topo_user.php"><i class="bi bi-person"></i></a>
-          </div>
-      
-    <?php else: include 'includes/topo_user.php'  ?>
-    <?php endif ?>
+  
+    if(isset($_SESSION['login'])){      
+      include 'includes/topo.php';
+      echo '<div class="card-body text-right" id="icon1">';
+      echo '<a href="includes/topo_user.php"><i class="bi bi-person"></i></a>';
+      echo '</div>';      
+    }
+    else
+    {
+      include 'includes/topo_user.php';
+    }
+ ?>
 
 <head>
   <meta charset="UTF-8">
@@ -27,10 +31,7 @@
 </head>
 
 <body>
-    <!-- TOPO-->
-    <?php
-        include 'includes/topo_user.php';
-    ?>
+  
     <?php
           require_once 'includes/funcoes.php';
           require_once 'core/conexao_mysql.php';
@@ -80,23 +81,28 @@
         <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nome'] ?>  </h3>   </p>
         <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nomeUsuario'] ?>  </h3>   </p> 
 		</div> 
-    <?php
+    <div class="upload-videos">
+      <?php
         $video_dir = "upload/videos/";
         foreach($videos as $video):
       ?>
       <div class="container-fluid" id="videos">
         <div class="listagem_video">
           <div class="video">
+          <ul>
+            <li>
             <video width="250" height="400" controls id="video-estilo">
-  
               <source src="<?php echo $video_dir.$video['filePath'] ?>" type="video/mp4">
               Your browser does not support the video tag.
             </video>
+            </li>
+          </ul>
           </div>
           <hr>
         </div>  
       </div>
         <?php endforeach; ?>
+    </div>
   </div>
 </div>
 
