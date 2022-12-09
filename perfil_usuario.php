@@ -73,14 +73,17 @@
       </li>
       </div>
       <div class="col-8" id="menu">
-      <div class="container-fluid">
-        <div class="container-fluid">
-        <div class="card-body text-left" id="perfil">
-      <i style="font-size: 50pt;" class="bi bi-person"></i>
-      </div></a>
-        <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nome'] ?>  </h3>   </p>
-        <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nomeUsuario'] ?>  </h3>   </p> 
-		</div> 
+    
+        <div class="col-md-2" id="perfil">
+            <img src="./upload/img/avatar.png" id="avatar">
+        </div>   
+        <div class="col-md-4">
+            <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nome'] ?>  </h3>   </p>
+            <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nomeUsuario'] ?>  </h3>   </p> 
+		    </div> 
+
+
+
     <div class="upload-videos">
       <?php
         $video_dir = "upload/videos/";
