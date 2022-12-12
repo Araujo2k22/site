@@ -80,6 +80,8 @@
         <div class="col-md-4">
             <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nome'] ?>  </h3>   </p>
             <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nomeUsuario'] ?>  </h3>   </p> 
+            <a href="core/usuario_repositorio.php?acao=logout"
+           class="btn btn-link btn-sm" role="button">Sair</a>
 		    </div> 
 
 

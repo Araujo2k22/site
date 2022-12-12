@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+    if(isset($_SESSION['login'])) {     
+      include 'includes/topo_user.php';
+      echo '<div class="card-body text-right" id="icon1">
+      <a href="includes/topo_user.php"><i class="bi bi-person"></i></a></div>';      
+    } 
+
+    else
+    {
+      include 'includes/topo.php';
+    }
+ ?>
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,21 +31,7 @@
 </head>
 
 <body>
-    <!-- TOPO-->
-    <?php
-  
-  if(isset($_SESSION['login'])){      
-    include 'includes/topo.php';
-    echo '<div class="card-body text-right" id="icon1">';
-    echo '<a href="includes/topo_user.php"><i class="bi bi-person"></i></a>';
-    echo '</div>';      
-  }
-  else
-  {
-    include 'includes/topo_user.php';
-  }
-?>
-    
+
   <div class="container-fluid">
     <div class="row tamanho">
       <div class="col-2 borda" id="menu">
