@@ -7,6 +7,7 @@
 
 
     <a href="index.php"><img id="img_topo" src="img/logo.png"></a>
+    
     <div class="col-md-3" id="divpesquisa">
       <form method="get">
           <input class="form-control mr-sm-2" type="text" placeholder="Pesquisar" aria-label="Search" name="busca" id="campoPesquisa">
