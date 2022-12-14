@@ -5,10 +5,16 @@
       <div class="container-fluid">
     <div class="col-md-3">
     <a href="index.php"><img id="img_topo" src="img/logo.png"></a>
+<<<<<<< HEAD
     </div>
     <div class="rom">
     <div class="col-sm-4" id="divpesq1">
       <form method="get" id="formpesq">
+=======
+    
+    <div class="col-md-3" id="divpesquisa">
+      <form method="get">
+>>>>>>> 4c18fff2a8d5c892933ab4bb35f53d6f3cfbf349
           <input class="form-control mr-sm-2" type="text" placeholder="Pesquisar" aria-label="Search" name="busca" id="campoPesquisa">
     </div>
     <div class="col-sm-4" id="btnpesq1">

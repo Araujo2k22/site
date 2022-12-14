@@ -77,9 +77,17 @@
         <div class="col-sm-2" id="perfil">
             <img src="./upload/img/avatar.png" id="avatar">
         </div>   
+<<<<<<< HEAD
         <div class="col-sm-6">
             <p><h3 id="text-title1">  <?php echo $_SESSION['login']['usuario']['nome'] ?>  </h3>   </p>
             <p><h3 id="text-subtitle">  <?php echo $_SESSION['login']['usuario']['nomeUsuario'] ?>  </h3>   </p> 
+=======
+        <div class="col-md-4">
+            <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nome'] ?>  </h3>   </p>
+            <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nomeUsuario'] ?>  </h3>   </p> 
+            <a href="core/usuario_repositorio.php?acao=logout"
+           class="btn btn-link btn-sm" role="button">Sair</a>
+>>>>>>> 4c18fff2a8d5c892933ab4bb35f53d6f3cfbf349
 		    </div> 
       </div>
     <hr style="border-top: 1px solid black;">
