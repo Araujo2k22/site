@@ -170,7 +170,7 @@ ul {
 }
 
 #divpesquisa{
-    max-width: 17.5%;
+    max-width: 14.5%;
 }
 
 #carregvideo{
@@ -180,4 +180,52 @@ ul {
 #avatar{
     width: 100px;
     height: 100px;
+}
+
+
+#formpesq{
+    width: 300px;
+
+}
+#btnpesq{
+    max-width: 8.5%;
+}
+#btnpesq1{
+    float: right;
+}
+#divpesq1{
+    max-width: 7%;
+    float: left;
+}
+#diventrar{
+    float: left;
+}
+#btncadas{
+    float: right;
+}
+#btnbotoes{
+    display: inline-block;
+}
+
+#text-title1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    padding-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+}
+
+#title-subtitle{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#btngostei{
+    float: right;
+}
+#divgostei{
+    float: right;
 }

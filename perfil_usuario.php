@@ -73,16 +73,16 @@
       </li>
       </div>
       <div class="col-8" id="menu">
-    
-        <div class="col-md-2" id="perfil">
+      <div class="row">
+        <div class="col-sm-2" id="perfil">
             <img src="./upload/img/avatar.png" id="avatar">
         </div>   
-        <div class="col-md-4">
-            <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nome'] ?>  </h3>   </p>
-            <p><h3 id="text-title">  <?php echo $_SESSION['login']['usuario']['nomeUsuario'] ?>  </h3>   </p> 
+        <div class="col-sm-6">
+            <p><h3 id="text-title1">  <?php echo $_SESSION['login']['usuario']['nome'] ?>  </h3>   </p>
+            <p><h3 id="text-subtitle">  <?php echo $_SESSION['login']['usuario']['nomeUsuario'] ?>  </h3>   </p> 
 		    </div> 
-
-
+      </div>
+    <hr style="border-top: 1px solid black;">
 
     <div class="upload-videos">
       <?php

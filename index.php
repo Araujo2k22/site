@@ -21,17 +21,16 @@
     <!-- TOPO-->
     <?php
   
-  if(isset($_SESSION['login'])){      
-    include 'includes/topo.php';
-    echo '<div class="card-body text-right" id="icon1">';
-    echo '<a href="includes/topo_user.php"><i class="bi bi-person"></i></a>';
-    echo '</div>';      
-  }
-  else
-  {
-    include 'includes/topo_user.php';
-  }
-?>
+    if(isset($_SESSION['login'])){      
+      include 'includes/topo_user.php';    
+    }
+    else
+    {
+      include 'includes/topo.php';
+    }
+ ?>
+   
+  
     
   <div class="container-fluid">
     <div class="row tamanho">
@@ -99,13 +98,16 @@
               <source src="<?php echo $video_dir.$video['filePath'] ?>" type="video/mp4">
               Your browser does not support the video tag.
             </video>
+            <div class="col-sm-2" id="divgostei"> 
+            <button type="submit" style="border-radius: 50%; height: 60px; width: 60px;" id="btngostei"><img src="upload/img/gostar.png" style="height: 40px; width: 40px;"></button>
           </div>
+        </div>
           <hr>
         </div>  
       </div>
         <?php endforeach; ?>  
     
-  </div>
+  </div>            
 </div>
 </body>                 
 </html>

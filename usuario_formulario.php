@@ -38,6 +38,7 @@
           class="img-fluid" alt="Phone image">
       </div>
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        
         <form method="post" action="core/usuario_repositorio.php">
           <input type="hidden" name="acao"
                                 value="<?php echo empty($id) ? 'insert' : 'update' ?>">
@@ -69,8 +70,8 @@
 
           <!-- Confirmar senha input -->
           <div class="form-outline mb-4">
-            <label class="form-label" for="senha">Confirmar senha</label>
-            <input type="password" id="senha" class="form-control form-control-lg" />
+            <label class="form-label" for="senha2">Confirmar senha</label>
+            <input type="password" id="senha2" class="form-control form-control-lg" />
           </div>
  
           <div class="d-flex justify-content-around align-items-center mb-4">
